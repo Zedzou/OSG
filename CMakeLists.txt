@@ -14,7 +14,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 # OSG 
-set(OSG_BINARY_DIR /home/zed/Project/Libs/OpenSceneGraph/bin)
+set(OSG_BINARY_DIR /home/zed/Project/libs/OpenSceneGraph/bin)
 include_directories(${OSG_BINARY_DIR}/include)
 set(OSG_LIBRARIES ${OSG_BINARY_DIR}/lib/libosg.so
                   ${OSG_BINARY_DIR}/lib/libosgViewer.so
@@ -27,7 +27,7 @@ add_executable(osgqt
   osgqt.cpp
   osgqt.h
   osgqt.ui
-
+  control.ui
   QtOsgView.cpp
   QtOsgView.h
 )

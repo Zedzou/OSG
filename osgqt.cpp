@@ -1,12 +1,18 @@
 #include "osgqt.h"
 #include "./ui_osgqt.h"
+#include "./ui_control.h"
 
 #include "QtOsgView.h"
 #include <QHBoxLayout>
 
 osgqt::osgqt(QWidget *parent) : QWidget(parent), ui(new Ui::osgqt)
 {
+    // 主界面
     ui->setupUi(this);
+
+    // 申请控制界面
+    control_ui = new Ui::control;
+    control_ui->show();
 
     // QT UI setting
     // QHBoxLayout* layout = new QHBoxLayout;
@@ -28,5 +34,6 @@ osgqt::osgqt(QWidget *parent) : QWidget(parent), ui(new Ui::osgqt)
 osgqt::~osgqt()
 {
     delete ui;
+    delete control_ui;
 }
 
